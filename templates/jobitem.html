@@ -1,0 +1,17 @@
+<div class="row border-bottom text-md-start mt-2 py-2">
+  <div class="col-9">
+      <h4 class="text-body-tertiary fw-bold mx-auto">{{job['title']}}  </h4>
+      <div class="mx-auto"><label class="fw-semibold">Location:</label>{{job['location']}}</div>
+      {% if 'salary' in job %}
+      <div class="mx-auto"><label class="fw-semibold">Salary:</label>{{job['salary']}}</div>
+      {% endif %}
+  </div>
+  <div class="col-3">
+    <div class="row-10 text-center">
+      <button type="button" class="btn btn-outline-secondary btn-sm m-2">View</button>
+    </div>
+    <div class="row-10 text-center">
+      <button type="button" class="btn btn btn-outline-secondary btn-sm m-2">Apply</button>
+    </div>
+  </div>
+</div>

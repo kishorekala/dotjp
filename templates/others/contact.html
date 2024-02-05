@@ -1,0 +1,24 @@
+<!-- contact.html -->
+<html>
+<head>
+    <title>Contact Us</title>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <!-- Display the form errors if any -->
+    {% for field, errors in form.errors.items() %}
+        {% for error in errors %}
+            <div style="color: red;">{{ error }}</div>
+        {% endfor %}
+    {% endfor %}
+    <!-- Display the form fields using WTForms syntax -->
+    <form method="POST" action="{{ url_for('contact') }}">
+        {{ form.csrf_token }}
+        <p>{{ form.name.label }}<br>{{ form.name }}</p>
+        <p>{{ form.email.label }}<br>{{ form.email }}</p>
+        <p>{{ form.message.label }}<br>{{ form.message }}</p>
+        <p>{{ form.submit }}</p>
+      
+    </form>
+</body>
+</html>
