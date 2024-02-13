@@ -33,16 +33,16 @@
     <div class="perma-nav container"><a href="/categories/all-other-remote-jobs"><p style="float: right;"> See more All Other Remote jobs<span id="arrow-right">→</span></p></a><a href="/"><p style="float: left;z-index: 999;"><span id="arrow-left">←</span> Back to all jobs </p></a></div>
     
     <div class="container">
-        <h2 class="text-left mx-auto pb-2"> {{job['title']}}</h2>
-          <div class="text-Center mx-auto pb-2">
-              {% for keys in job %}
-               <p class="fw-medium text-capitalize">{{keys}}: <span class="fw-light text-capitalize text-left mx-auto pb-2"> {{job[keys]}}</span> </p> 
-              {% endfor %}
-
-          </div>
+      <div id="message-box" class="animated fadeIn">
+        <div id="icon">
+          <i class="fa fa-check"></i>
+        </div>
+        <div id="text">
+          <h3 id="status">Success</h3>
+          <p class="fs-6" id="message">You have applied for the <span class="fs-4 mx-auto pb-2 fw-semibold">{{job['title']}} Role</span> successfully. We will contact you soon.</p>
+      
+        </div>
+      </div>
     </div>
     </div>
-    <div class="text-center">
-       {% include 'footer.html' %}
-    </div>
-    </body>
+       </body>
